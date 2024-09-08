@@ -1,47 +1,21 @@
-const path = require("path");
-
-/**
- * @type {import("eslint").Linter.Config}
- */
 module.exports = {
-  env: {
-    browser: false,
-    es2021: true,
-    mocha: true,
-    node: true,
-  },
-  extends: ["plugin:prettier/recommended"],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    ecmaVersion: 12,
-  },
-  plugins: [
-    "@typescript-eslint",
-    "prettier",
-    "simple-import-sort",
-    "sort-keys-fix",
-    "typescript-sort-keys",
+  root: true,
+  env: { browser: true, es2020: true },
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:react-hooks/recommended',
   ],
+  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
+  settings: { react: { version: '18.2' } },
+  plugins: ['react-refresh'],
   rules: {
-    "@typescript-eslint/sort-type-union-intersection-members": "error",
-    camelcase: "off",
-    "simple-import-sort/exports": "error",
-    "simple-import-sort/imports": "error",
-    "sort-keys-fix/sort-keys-fix": "error",
-    "typescript-sort-keys/interface": "error",
-    "typescript-sort-keys/string-enum": "error",
+    'react/jsx-no-target-blank': 'off',
+    'react-refresh/only-export-components': [
+      'warn',
+      { allowConstantExport: true },
+    ],
   },
-  settings: {
-    "import/parsers": {
-      "@typescript-eslint/parser": [".js", ".jsx", ".ts", ".tsx", ".d.ts"],
-    },
-    "import/resolver": {
-      node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx", ".d.ts"],
-      },
-      typescript: {
-        project: path.join(__dirname, "tsconfig.json"),
-      },
-    },
-  },
-};
+}
