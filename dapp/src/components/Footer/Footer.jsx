@@ -1,16 +1,11 @@
-import "./tasks/interact";
-import "./tasks/deploy";
-import "@nomicfoundation/hardhat-toolbox";
-import "@zetachain/toolkit/tasks";
+import './Footer.css'
 
-import { getHardhatConfigNetworks } from "@zetachain/networks";
-import { HardhatUserConfig } from "hardhat/config";
+const Footer = () => {
+  return (
+    <div className='footer'>
+      <p>Copyright @ 2024, Cryptoplace - All Right Reserved.</p>
+    </div>
+  )
+}
 
-const config: HardhatUserConfig = {
-  networks: {
-    ...getHardhatConfigNetworks(),
-  },
-  solidity: "0.8.7",
-};
-
-export default config;
+export default Footer
