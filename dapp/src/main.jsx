@@ -1,16 +1,16 @@
-import "./tasks/interact";
-import "./tasks/deploy";
-import "@nomicfoundation/hardhat-toolbox";
-import "@zetachain/toolkit/tasks";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import './index.css'
+import { BrowserRouter } from 'react-router-dom'
+import CoinContextProvider from './context/CoinContext.jsx'
 
-import { getHardhatConfigNetworks } from "@zetachain/networks";
-import { HardhatUserConfig } from "hardhat/config";
-
-const config: HardhatUserConfig = {
-  networks: {
-    ...getHardhatConfigNetworks(),
-  },
-  solidity: "0.8.7",
-};
-
-export default config;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <CoinContextProvider>
+        <App />
+      </CoinContextProvider>
+    </BrowserRouter>
+  </React.StrictMode>,
+)
