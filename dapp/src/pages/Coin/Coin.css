@@ -1,47 +1,67 @@
-const path = require("path");
+.spinner{
+  display: grid;
+  place-self: center;
+  min-height: 80vh;
+}
 
-/**
- * @type {import("eslint").Linter.Config}
- */
-module.exports = {
-  env: {
-    browser: false,
-    es2021: true,
-    mocha: true,
-    node: true,
-  },
-  extends: ["plugin:prettier/recommended"],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    ecmaVersion: 12,
-  },
-  plugins: [
-    "@typescript-eslint",
-    "prettier",
-    "simple-import-sort",
-    "sort-keys-fix",
-    "typescript-sort-keys",
-  ],
-  rules: {
-    "@typescript-eslint/sort-type-union-intersection-members": "error",
-    camelcase: "off",
-    "simple-import-sort/exports": "error",
-    "simple-import-sort/imports": "error",
-    "sort-keys-fix/sort-keys-fix": "error",
-    "typescript-sort-keys/interface": "error",
-    "typescript-sort-keys/string-enum": "error",
-  },
-  settings: {
-    "import/parsers": {
-      "@typescript-eslint/parser": [".js", ".jsx", ".ts", ".tsx", ".d.ts"],
-    },
-    "import/resolver": {
-      node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx", ".d.ts"],
-      },
-      typescript: {
-        project: path.join(__dirname, "tsconfig.json"),
-      },
-    },
-  },
-};
+.spin{
+  width: 65px;
+  height: 65px;
+  place-self: center;
+  border: 5px solid #bdbdbd;
+  border-top-color: #4500c6;
+  border-radius: 50%;
+  animation: rotate 2s infinite;
+}
+@keyframes rotate {
+  100%{
+      transform: rotate(360deg);
+  }
+}
+
+.coin{
+  padding: 0 20px;
+}
+
+.coin-name{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 100px auto;
+  margin-bottom: 50px;
+}
+
+.coin-name img{
+  width: 100px
+}
+
+.coin-name img{
+  font-size: 44px;
+  font-weight: 500;
+}
+
+.coin-chart{
+  max-width: 600px;
+  height: 250px;
+  margin: auto;
+}
+
+.coin-info{
+  max-width: 600px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.coin-info ul{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+  border-bottom: 1px solid #5f5d5f;
+  list-style: none;
+}
+
+.coin-info ul li:last-child{
+  font-weight: 300;
+}
