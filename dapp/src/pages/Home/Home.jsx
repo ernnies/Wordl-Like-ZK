@@ -30,15 +30,16 @@ const Home = () => {
   return (
     <div className='home'>
       <div className="hero">
-        <h1>Информационная площадка <br/> котировок криптовалюты</h1>
-        <p>Добро пожаловать на крупнейгую информационную площадку для криптоинвесторов
+        <h1>Xenea's Information platform
+         <br/> for cryptocurrency quotes</h1>
+        <p>Welcome to the largest information platform for crypto investors
         </p>
         <form onSubmit={searchHandler}>
-          <input onChange={inputHandler} list='coinlist' value={input} type="text" placeholder='Поиск крипты..' required/>
+          <input onChange={inputHandler} list='coinlist' value={input} type="text" placeholder='search for crypto..' required/>
           <datalist id='coinlist'>
             {allCoin.map((item, index)=>(<option key={index} value={item.name}/>))}
           </datalist>
-          <button type='submit'>Поиск</button>
+          <button type='submit'>Search</button>
         </form>
       </div>
       <div className="crypto-table">
@@ -46,8 +47,8 @@ const Home = () => {
           <p>#</p>
           <p>Цена</p>
           <p>Price</p>
-          <p style={{textAlign:"center"}}>24Ч колебания</p>
-          <p className='market-cap'>Капитализация</p>
+          <p style={{textAlign:"center"}}>24H fluctuations</p>
+          <p className='market-cap'>Capitalization</p>
         </div>
         {
           displayCoin.slice(0,10).map((item, index)=>(
