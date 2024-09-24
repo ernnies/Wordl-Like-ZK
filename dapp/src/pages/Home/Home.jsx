@@ -30,7 +30,7 @@ const Home = () => {
   return (
     <div className='home'>
       <div className="hero">
-        <h1>Xenea's Information platform
+        <h1>Superfluid's Information platform
          <br/> for cryptocurrency quotes</h1>
         <p>Welcome to the largest information platform for crypto investors
         </p>
@@ -45,7 +45,7 @@ const Home = () => {
       <div className="crypto-table">
         <div className="table-layout">
           <p>#</p>
-          <p>Цена</p>
+          <p>Price</p>
           <p>Price</p>
           <p style={{textAlign:"center"}}>24H fluctuations</p>
           <p className='market-cap'>Capitalization</p>
