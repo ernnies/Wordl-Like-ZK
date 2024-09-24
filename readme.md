@@ -13,6 +13,7 @@ Current crypto platforms rely heavily on centralized services for real-time mark
 
 ### Technologies I used
 - **Frontend**: Vite, React.js
+- **Superfluid**: 
 - **Blockchain & Smart Contracts**: Hardhat, Solidity
 - **Web3 Tools**: Ethers.js, @nomiclabs/hardhat-ethers, @ethersproject/abi, @ethersproject/providers
 - **APIs**: Axios for fetching real-time crypto market data
