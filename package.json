@@ -1,0 +1,24 @@
+{
+  "name": "zk-wordle",
+  "version": "1.0.0",
+  "description": "Wordle game implemented using the Zero-Knowledge Proofs",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "circomlib": "^2.0.5"
+  },
+  "scripts": {
+    "compile": ". circuits/scripts/compile-circuit.sh && node ./circuits/scripts/rename-verifiers.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alxkzmn/zk-wordle.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alxkzmn/zk-wordle/issues"
+  },
+  "homepage": "https://github.com/alxkzmn/zk-wordle#readme"
+}

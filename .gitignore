@@ -1,0 +1,14 @@
+.env
+.DS_Store
+.vscode
+*.o
+circuits/compiled/*
+node_modules
+blockchain/cache
+blockchain/out
+blockchain/broadcast
+circuits/powers-of-tau
+frontend/.env
+circuits/cache
+backend/src/blockchain
+!backend/src/blockchain/ZKWordle.sol/ZKWordle.json
